@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# US Election NLP Project
 
-## Getting Started
+This is a modern frontend-only web application built to simulate an NLP Sentiment Analysis pipeline for US Election text data.
 
-First, run the development server:
+It features a premium, dark-mode glassmorphism UI, interactive data visualizations, and realistic mock prediction logic suited for college-level viva presentations or hackathon demonstrations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, TypeScript)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Charts**: [Chart.js](https://www.chartjs.org/) via `react-chartjs-2`
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧠 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Mock NLP Prediction Engine**: Uses keyword-based heuristics ("good", "terrible", etc.) with weighted randomized probability to generate fake but realistic NLP sentiment (Positive, Negative, Neutral).
+- **Interactive Data Visualization**: Animated Doughnut charts representing confidence distributions.
+- **State-of-the-art UI**: Custom animated gradients, frosted glass panels, and smooth hover interactions.
 
-## Learn More
+## 🛠️ How to run locally
 
-To learn more about Next.js, take a look at the following resources:
+1. Ensure you have [Node.js](https://nodejs.org/) installed.
+2. Clone or download this repository.
+3. Open a terminal in the project directory.
+4. Install all dependencies:
+   ```bash
+   npm install
+   ```
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+6. Open your browser and navigate to `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ☁️ How to deploy on Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Vercel is the easiest and recommended platform for deploying Next.js applications.
 
-## Deploy on Vercel
+1. Create a free account on [Vercel](https://vercel.com/).
+2. Push your project code to a GitHub, GitLab, or Bitbucket repository.
+3. On the Vercel dashboard, click **"Add New..." -> "Project"**.
+4. Import your repository from Git.
+5. Leave the default settings (Vercel automatically detects Next.js builds: `npm run build` and `npm run start`).
+6. Click **Deploy**.
+7. In under 2 minutes, Vercel will provide you with a live, shareable URL!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎓 Note for College Viva
+Since this project does *not* include a Python backend or API keys to keep the setup as simple as possible, remember to explain that the underlying machine learning logic is currently *simulated* on the frontend. If a professor demands real Python processing later, you can replace the `@/lib/mockPredict.ts` file with a real `fetch()` request pointing to a Flask/FastAPI server.
